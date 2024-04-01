@@ -79,7 +79,7 @@ class Main{
     //! Task 01
     private static void job_01(Ticket tkc){
         clear();
-        if(tkc==null) tkc=fill(new Empty_tck());  
+        if(tkc==null) tkc=fill(new Empty_tck());
         System.out.print(
             title()+
             chart(tkc)+
@@ -116,5 +116,5 @@ class Main{
         }start(true);
     }
 
-    public static void main(String[] args) { start(true); }
+    public static void main(String[] args) {start(true); }
 }
