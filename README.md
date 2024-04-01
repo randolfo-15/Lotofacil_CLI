@@ -1,6 +1,6 @@
 # Loto Fácil
 
-!(Loteria)[image/zebra.png]
+![Loteria](image/zebra.png)
 
 LotoFacil é um programa CLI(Command line interface) que simula um sorteio de loteria
 você pode escolher 6 números, ou pegar um bilhete pronto e testar sua sorte.
@@ -25,8 +25,8 @@ Ao adentrar a pasta do projeto dígite:
 
 Após Esta etapa o programa inicia sua execução, escolha uma opção e aposte
 
-!(banner)[image/banner.jpg]
+![banner](image/banner.jpg)
 
 ## Placar de resultados
 
-!(placar)[image/placar.jpg]
+![placar](image/placar.jpg)
