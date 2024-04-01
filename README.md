@@ -2,6 +2,8 @@
 
 ![Loteria](image/zebra.png)
 
+## Proposta
+
 LotoFacil é um programa CLI(Command line interface) que simula um sorteio de loteria
 você pode escolher 6 números, ou pegar um bilhete pronto e testar sua sorte.
 
