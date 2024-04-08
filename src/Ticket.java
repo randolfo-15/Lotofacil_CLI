@@ -33,5 +33,11 @@ class Completed_tck extends Ticket{
     Completed_tck(){ fill(); }
    
     @Override
-    public void fill(){ for(int i=0;i<size;i++) numbers[i] = new Random().nextInt(1,100);}
+    public void fill(){ 
+        for(int i=0;i<size;i++){
+            int value = new Random().nextInt(1,100); 
+            for(int j=0;j<=i;j++) if(value==numbers[j]) i=j-1;
+            numbers[i]=value;
+        }
+    }
 }

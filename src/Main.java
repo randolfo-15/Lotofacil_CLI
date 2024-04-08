@@ -113,7 +113,9 @@ class Main{
             case 1:job_01(null); break;
             case 2:job_01(new Completed_tck()); break; 
         
-        }start(true);
+        }
+        lottery.new_game();
+        start(true);
     }
 
     public static void main(String[] args) {start(true); }
