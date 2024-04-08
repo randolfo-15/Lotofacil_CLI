@@ -5,6 +5,7 @@
  * @file   : Main.java 
  * @date   : 01-04-24
  *****************************************************/
+import java.util.Random;
 import java.util.Scanner;
 
 class Main{
@@ -88,13 +89,38 @@ class Main{
         System.out.print(arrow()+"Nova aposta [y/n]? ");
         if(read.next().equals("n")) System.exit(0);;
     } 
-    
+   
+    //! Apostar em uma letra
+    private static void aposta_letter(){
+        char opt = (char) new Random().nextInt(65,91);
+        System.out.print("Escolha uma letra: ");
+        char user = Character.toUpperCase(read.next().charAt(0));
+        System.out.println((opt==user)?"Acertou "+opt+"=="+user:"Errou "+opt+"!="+user);
+        System.out.print(" Apostar de novo [y/n]? ");
+        if(read.next().equals("n")) System.exit(0);
+    }
+
+    //! Impar ou Par 
+    private static void aposta_par_impar(){
+        boolean par = true;
+        System.out.print(" Quer ser par [y/n]? ");
+        if(read.next().equals("n")) par = false;
+        System.out.print(" Escolha um valor: ");
+        int user = read.nextInt(),
+            opt  = new Random().nextInt(0,2);
+        if(par) System.out.println(" Voce "+(((opt+user)%2==0)?"acertou":"errou")+" deu "+(opt+user));
+        else System.out.println(" Voce "+(((opt+user)%3==0)?"acertou":"errou")+" deu "+(opt+user));
+        System.out.print(" Apostar de novo [y/n]? ");
+        if(read.next().equals("n")) System.exit(0);
+    }
 
     //! Banner
     static int Layout(){
         clear();
         System.out.print(
             title()+
+            rd+"\n\t\t\t4"+df+" -> Aposta impar ou par\n"+
+            rd+"\n\t\t\t3"+df+" -> Aposte em uma letra\n"+
             rd+"\n\t\t\t2"+df+" -> Testar um Ticket\n"+
             rd+"\n\t\t\t1"+df+" -> Fazer uma Aposta\n"+
             rd+"\n\t\t\t0"+df+" -> Sair\n"+
@@ -112,7 +138,8 @@ class Main{
             case 0: return;
             case 1:job_01(null); break;
             case 2:job_01(new Completed_tck()); break; 
-        
+            case 3:aposta_letter(); break; 
+            case 4:aposta_par_impar();; break; 
         }
         lottery.new_game();
         start(true);
